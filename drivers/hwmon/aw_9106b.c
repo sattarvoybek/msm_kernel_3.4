@@ -36,7 +36,7 @@
 
 #include <linux/i2c.h>
 #include "aw_9106b.h"
-#include  <../../include/linux/printk.h>
+#include  "../../include/linux/printk.h"
 
 static bool AW9106B_SUSPEND_FLAG=false; 
 //#define GPIO_PWDN 28
@@ -54,37 +54,7 @@ static bool AW9106B_SUSPEND_FLAG=false;
 #define END_OUTN 5
 #define FADE_PARAM_LEN 20
 #define GRADE_PARAM_LEN 20
-#if 0
-enum aw_fade_time {
-	FADE_0_MS = 0x00,
-	FADE_256_MS = 0x09,
-	FADE_512_MS = 0x12,
-	FADE_1024_MS = 0x1b,
-	FADE_2048_MS = 0x24,
-	FADE_4096_MS = 0x2d,
-};
-enum aw_fullon_time {
-	FULLON_0_MS,
-	FULLON_256_MS,
-	FULLON_512_MS,
-	FULLON_1024_MS,
-	FULLON_2048_MS,
-	FULLON_4096_MS,
-	FULLON_8192_MS,
-	FULLON_16384_MS,
-};
 
-enum aw_fulloff_time {
-	FULLOFF_0_MS = 0x00,
-	FULLOFF_256_MS = 0x08,
-	FULLOFF_512_MS = 0x10,
-	FULLOFF_1024_MS = 0x18,
-	FULLOFF_2048_MS = 0x20,
-	FULLOFF_4096_MS = 0x28,
-	FULLOFF_8192_MS = 0x30,
-	FULLOFF_16384_MS = 0x38,
-};
-#endif
 enum aw_fade_time {
 	FADE_0_MS,
 	FADE_256_MS,
