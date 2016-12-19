@@ -5341,8 +5341,13 @@ static int tapan_handle_pdata(struct tapan_priv *tapan)
 	}
 
 	/* Set micbias capless mode with tail current */
+        #if defined(CONFIG_ZTEMT_AUDIO_NX404H) || defined(CONFIG_ZTEMT_AUDIO_NE501J)
+	value = (pdata->micbias.bias1_cap_mode == MICBIAS_EXT_BYP_CAP ?
+		 0x10 : 0x10);
+        #else
 	value = (pdata->micbias.bias1_cap_mode == MICBIAS_EXT_BYP_CAP ?
 		 0x00 : 0x10);
+        #endif
 	snd_soc_update_bits(codec, TAPAN_A_MICB_1_CTL, 0x10, value);
 	value = (pdata->micbias.bias2_cap_mode == MICBIAS_EXT_BYP_CAP ?
 		 0x00 : 0x10);

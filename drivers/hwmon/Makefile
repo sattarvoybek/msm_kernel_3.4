@@ -136,9 +136,10 @@ obj-$(CONFIG_SENSORS_QPNP_ADC_CURRENT)	+= qpnp-adc-current.o qpnp-adc-common.o
 ################################################# SENROS START
 		
 ################################################# ALS_PS START
-obj-$(CONFIG_ZTEMT_SENSORS_ALS_PS_AUTO_DETECT) += als_prox.o tmg399x.o tmd2772.o
+obj-$(CONFIG_ZTEMT_SENSORS_ALS_PS_AUTO_DETECT) += als_prox.o tmg399x.o tmd2772.o tmd2772_nx404h.o
 obj-$(CONFIG_ZTEMT_SENSORS_ALS_PS_TMG3993) += tmg399x.o
 obj-$(CONFIG_ZTEMT_SENSORS_ALS_PS_TMD2772) += tmd2772.o
+obj-$(CONFIG_ZTEMT_SENSORS_ALS_PS_TMD2772_NX404H) += tmd2772_nx404h.o
 ################################################# ALS_PS END
 
 ################################################# TEMP_HUMI START
@@ -160,6 +161,10 @@ obj-$(CONFIG_ZTEMT_SENSORS_HALL_DEVICE_PAIR_OUT)  	+= hall_pair_out.o
 ################################################# HALL_DEVICE END
 
 ################################################# SENROS END
+
+#ZTEMT ADD by wangshuai
+obj-$(CONFIG_ZTEMT_LIQUID_LED)      += aw_9106b.o
+#ZTEMT END
 obj-$(CONFIG_PMBUS)		+= pmbus/
 
 ccflags-$(CONFIG_HWMON_DEBUG_CHIP) := -DDEBUG
