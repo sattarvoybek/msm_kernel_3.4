@@ -92,7 +92,7 @@ static struct pc_temp_ocv_lut pc_temp_ocv = {
 	}
 };
 
-struct bms_battery_data ztemt_2000mAh_data = {
+struct bms_battery_data ztemt_nx404j_data = {
 	.fcc				= 2000,
 	.fcc_temp_lut			= &fcc_temp,
 	.fcc_sf_lut				= &fcc_sf,
