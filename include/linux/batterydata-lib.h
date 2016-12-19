@@ -139,6 +139,10 @@ extern struct bms_battery_data  qrd_4v2_1300mah_data;
 extern struct bms_battery_data  ztemt_3000mAh_data;
 #endif
 
+#ifdef CONFIG_ZTEMT_NX404J_BATTERY
+extern struct bms_battery_data  ztemt_nx404j_data;
+#endif
+
 #ifdef CONFIG_ZTEMT_NX507_BATT_2300MAH
 extern struct bms_battery_data  ztemt_nx507_2300mAh_data;
 #endif

@@ -265,6 +265,7 @@ obj-$(CONFIG_PM8921_BMS) += bms-batterydata.o bms-batterydata-desay.o batterydat
 obj-$(CONFIG_QPNP_BMS) += bms-batterydata.o bms-batterydata-desay.o batterydata-lib.o
 obj-$(CONFIG_QPNP_BMS) += bms-batterydata-oem.o bms-batterydata-qrd-4v35-2000mah.o bms-batterydata-qrd-4v2-1300mah.o
 #ZTEMT Added
+obj-$(CONFIG_ZTEMT_NX404J_BATTERY) += bms_ztemt_batterydata_NX404J.o
 obj-$(CONFIG_ZTEMT_NX507_BATT_2300MAH) += bms_ztemt_NX507_batterydata_2300mAh.o
 obj-$(CONFIG_ZTEMT_BATT_3000MAH) += bms_ztemt_batterydata_3000mAh.o
 #ZTEMT END

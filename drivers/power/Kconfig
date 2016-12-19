@@ -530,6 +530,12 @@ config ZTEMT_CHG_PARAM_CHECK
 	  ZTEMT  Charge parameters check
 
 ################ztemt battery config
+config ZTEMT_NX404J_BATTERY
+	bool "ZTEMT 2000AMH BATTERY"
+	default n
+	help
+	  ZTEMT 2000AMH Battery Feature
+
 config ZTEMT_NX507_BATT_2300MAH
 	bool "ZTEMT 2300mAh battery for nx507"
 	default n
